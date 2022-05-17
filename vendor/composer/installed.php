@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => 'adba3b952bac0210ebc42989609777e0b48696bc',
+        'name' => '__root__',
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => 'adba3b952bac0210ebc42989609777e0b48696bc',
+            'dev_requirement' => false,
+        ),
+        'mustache/mustache' => array(
+            'pretty_version' => 'v2.14.1',
+            'version' => '2.14.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mustache/mustache',
+            'aliases' => array(),
+            'reference' => '579ffa5c96e1d292c060b3dd62811ff01ad8c24e',
+            'dev_requirement' => false,
+        ),
+        'tracy/tracy' => array(
+            'pretty_version' => 'v2.9.2',
+            'version' => '2.9.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../tracy/tracy',
+            'aliases' => array(),
+            'reference' => '03965a7cb94d284dbf7e3b788b3691715c13d401',
+            'dev_requirement' => false,
+        ),
+    ),
+);
