@@ -2,9 +2,7 @@
 class Access{
     public int $user_id;
     public string $email;
-    public string $password;
-    public string $admin;
-    public string $cook;
+    public string $password;    
     public string $verifyPassword;
 
     public function __construct(array $accessData = [])
