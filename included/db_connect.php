@@ -1,5 +1,6 @@
-$host = '127.0.0.1';
- $db = 'ip_3';
+<?php
+ $host = '127.0.0.1';
+ $db = 'pizzastroj';
  $user = 'www-aplikace';
  $pass = 'nevimkamo123';
  $charset = 'utf8mb4';

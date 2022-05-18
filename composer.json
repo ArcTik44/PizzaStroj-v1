@@ -2,5 +2,8 @@
     "require": {
         "tracy/tracy": "^2.9",
         "mustache/mustache": "^2.14"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9"
     }
 }
