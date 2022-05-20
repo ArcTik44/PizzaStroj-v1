@@ -1,7 +1,9 @@
 {
     "require": {
         "tracy/tracy": "^2.9",
-        "mustache/mustache": "^2.14"
+        "mustache/mustache": "^2.14",
+        "apache/log4php": "^2.3"
+        
     },
     "require-dev": {
         "phpunit/phpunit": "9"

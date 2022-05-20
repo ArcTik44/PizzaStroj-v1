@@ -1,4 +1,5 @@
 <?php
+require "../included/bootstrap.inc.php";
 final class RegisterForm extends BaseDBPage{
     private Access $registerData;
 
@@ -8,8 +9,12 @@ final class RegisterForm extends BaseDBPage{
         $this->title = "Registrace";
     }
     protected function body():string{
-        $this->loginData = Access::readPost();
-        return $this->m->render('registerForm',['registerData'=>$this->loginData]);
+        $this->registerData = Access::readPost();
+        $getInfo = $this->registerData->Register();
+        if($getInfo){
+
+        }
+        return $this->m->render('registerForm',['registerData'=>$this->registerData]);
     }
 
 }

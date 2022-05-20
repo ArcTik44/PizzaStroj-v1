@@ -1,8 +1,15 @@
 <h1>Registrace</h1>
 <form method = "post">
+<label for ="customer_name">Jméno:</label>
+<input type = "text" required name="customer_name" id="customer_name">
+<label for ="customer_surname">Příjmení:</label>
+<input type = "text" required name="customer_surname" id="customer_surname">
 <label for="email">Email:</label>
 <input type = "email" required name="email" id="email">
 <label>Password:</label>
 <input type="password" required name="password" id="password">
+<label>Verify password:</label>
+<input type="password" required name="verifypassword" id="verifypassword">
 <input type="submit" value="Registrovat">
 </form>
+<a href="login.php">Máte u nás účet?</a>
