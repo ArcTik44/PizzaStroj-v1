@@ -3,14 +3,15 @@ require "../included/bootstrap.inc.php";
 class HomePage extends BaseDBPage{
     public string $name;
     public string $email;
-    public int $customer_id;
+    public ?int $customer_id;
 
     public function __construct()
     {
         parent::__construct();
-        $this->title = $_SESSION['name']??"";
+        $this->title = "Uživatelský profil";
+        $this->name = $_SESSION['name']??"";
         $this->email = $_SESSION['email']??"";
-        $this->customer_id = $_SESSION['customer_id']??0;
+        
     }
 
     protected function body(): string

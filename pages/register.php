@@ -10,10 +10,20 @@ final class RegisterForm extends BaseDBPage{
     }
     protected function body():string{
         $this->registerData = Access::readPost();
-        $getInfo = $this->registerData->Register();
-        if($getInfo){
+        if($this->registerData->password==$this->registerData->verifyPassword)
+        {
+            $isOk = $this->registerData->ValidateRegister();
+            if($isOk){
+            $this->registerData->password = password_hash($this->registerData->password,PASSWORD_DEFAULT);
+            $getInfo = $this->registerData->Register();
+            if($getInfo){
+            header('location:login.php',false);
+            exit;
+            }
+            }
 
         }
+        
         return $this->m->render('registerForm',['registerData'=>$this->registerData]);
     }
 

@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '018ea94952121fb6b0ba000cf06c81e97bcd8099',
+        'reference' => '3bd10c06be62bac3e9618261ff0596bd96b93e17',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '018ea94952121fb6b0ba000cf06c81e97bcd8099',
+            'reference' => '3bd10c06be62bac3e9618261ff0596bd96b93e17',
             'dev_requirement' => false,
         ),
         'apache/log4php' => array(
