@@ -1,0 +1,17 @@
+<h1>Tvé objednávky</h1>
+<table>
+<thead>
+<tr>Email: </tr>
+<tr>Order time:</tr>
+<tr>Price</tr>
+</thead>
+<tbody>
+{{#orders}}
+<tr>
+    <td>{{email}}</td>
+    <td>{{order_time}}</td>
+    <td>{{price}} $</td>
+</tr>
+{{/orders}}
+</tbody>
+</table>

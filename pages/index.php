@@ -3,7 +3,7 @@ require "../included/bootstrap.inc.php";
 class HomePage extends BaseDBPage{
     public string $name;
     public string $email;
-    public ?int $customer_id;
+    public int $customer_id;
 
     public function __construct()
     {
@@ -11,7 +11,7 @@ class HomePage extends BaseDBPage{
         $this->title = "Uživatelský profil";
         $this->name = $_SESSION['name']??"";
         $this->email = $_SESSION['email']??"";
-        
+        $this->customer_id = $_SESSION['customer_id'];  
     }
 
     protected function body(): string
@@ -21,7 +21,7 @@ class HomePage extends BaseDBPage{
                   header('location:login.php',false);
                   exit;
             }
-        return $this->m->render('homepage',['customername'=>$_SESSION['name']]);
+        return $this->m->render('homepage',['customername'=>$this->name,'customerId'=>$this->customer_id]);
     }
 }
 (new HomePage())->render();
