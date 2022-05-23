@@ -1,17 +1,21 @@
-<h1>Tvé objednávky</h1>
-<table>
+<h1>My Orders</h1>
+<table class="table table-stripe">
 <thead>
-<tr>Email: </tr>
-<tr>Order time:</tr>
+<tr>Email</tr>
+<tr>Order Time</tr>
 <tr>Price</tr>
+<tr>Status</tr>
 </thead>
 <tbody>
 {{#orders}}
 <tr>
     <td>{{email}}</td>
     <td>{{order_time}}</td>
-    <td>{{price}} $</td>
+    <td>{{price}}$</td>
+    <td>{{state}}</td>
+    <td><a href="orderDetail.php?order_id={{order_id}}">Detail</a></td>
 </tr>
 {{/orders}}
 </tbody>
 </table>
+<a href = "index.php">Back</a>

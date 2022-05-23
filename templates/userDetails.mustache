@@ -1,0 +1,35 @@
+<form method = "post">
+{{#details}}
+<div>
+<label for="name">Name: </label>
+<input type="text" id="name" name="name" value="{{customer.name}}">
+</div>
+<div>
+<label for="surname">Surname: </label>
+<input type="text" id="surname" name="surname" value="{{customer.surname}}">
+</div>
+<div>
+<label for="email">Email: </label>
+<input type="email" id="email" name="email" value="{{customer.email}}">
+</div>
+<div>
+<label for="street">Street: </label>
+<input type="text" id="street" name="street" value="{{address.street}}">
+</div>
+<div>
+<label for="city">City: </label>
+<input type="text" id="city" name="city" value="{{address.city}}">
+</div>
+<div>
+<label for="number">Number: </label>
+<input type="number" id="number" name="number" value="{{address.number}}">
+</div>
+<div>
+<label for="postal_code">Postal Code: </label>
+<input type="number" id="number" name="number" value="{{address.postal_code}}">
+</div>
+<div>
+<input type = "submit" value = "Change">
+</div>
+{{/details}}
+</form>
