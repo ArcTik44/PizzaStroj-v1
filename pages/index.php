@@ -8,7 +8,7 @@ final class HomePage extends BaseDBPage{
     public function __construct()
     {
         parent::__construct();
-        $this->title = "Uživatelský profil";
+        $this->title = $_SESSION['email']??"";
         $this->name = $_SESSION['name']??"";
         $this->email = $_SESSION['email']??"";
         $this->customer_id = $_SESSION['customer_id']??0;  

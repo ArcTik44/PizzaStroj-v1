@@ -1,8 +1,8 @@
 <h1>My Orders</h1>
-<table class="table table-stripe">
+<table class="table table-stripe list">
 <thead>
 <tr>Email</tr>
-<tr>Order Time</tr>
+<tr>Expected delivery time</tr>
 <tr>Price</tr>
 <tr>Status</tr>
 </thead>
@@ -10,7 +10,7 @@
 {{#orders}}
 <tr>
     <td>{{email}}</td>
-    <td>{{order_time}}</td>
+    <td>{{delivery_time}}</td>
     <td>{{price}}$</td>
     <td>{{state}}</td>
     <td><a href="orderDetail.php?order_id={{order_id}}">Detail</a></td>
