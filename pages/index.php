@@ -16,14 +16,30 @@ final class HomePage extends BaseDBPage{
 
     protected function body(): string
     {
+        $updateQuery = "SELECT `name`,surname,email, customer_id FROM customer WHERE customer_id = :customer_id";
+        $queryAddress = "SELECT address.number, address.street, address.city, address.postal_code FROM address WHERE customer_id =:customer_id";
+        
+        $stmt = DB::getConnection()->prepare($updateQuery);
+        $stmtAddress = DB::getConnection()->prepare($queryAddress);
+
+        $stmt->bindParam(':customer_id',$this->customer_id);
+        $stmtAddress->bindParam(':customer_id',$this->customer_id);
+        $stmtAddress->execute();
+        $stmt->execute();
+
         $addressVerified = false;
+
+        if($stmt->rowCount()!=0){
+            $addressVerified = true;
+        }
+        else $addressVerified = false;
         if(!$_SESSION)
             {
                   header('location:login.php',false);
                   exit;
             }
         
-        return $this->m->render('homepage',['customername'=>$this->name,'customerId'=>$this->customer_id,'addressVerified'=>$addressVerified]);
+        return $this->m->render('homepage',['data'=>$stmt,'addressVerified'=>$addressVerified]);
     }
 }
 (new HomePage())->render();

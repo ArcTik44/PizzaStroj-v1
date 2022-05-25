@@ -1,5 +1,7 @@
-<h1>Vítej, {{customername}}</h1>
-<a href = "{{#addressVerified}}createOrder.php?customer_id={{customerId}}{{/addressVerified}}">Create Order</a>
-<a href = "orders.php?customer_id={{customerId}}">My Orders</a>
-<a href = "userDetails.php?customer_id={{customerId}}">Change Account Details</a>
+{{#data}}
+<h1>Vítej, {{name}} {{surname}}</h1>
+<a href = "{{#addressVerified}}createOrder.php?customer_id={{customer_id}}{{/addressVerified}}">Create Order</a>
+<a href = "orders.php?customer_id={{customer_id}}">My Orders</a>
+<a href = "userDetails.php?customer_id={{customer_id}}">Change Account Details</a>
+{{/data}}
 <a href = "logout.php">Log Out</a>
