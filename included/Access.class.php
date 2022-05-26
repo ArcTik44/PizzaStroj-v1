@@ -26,7 +26,22 @@ class Access{
         $this->customerPSC = filter_input(INPUT_POST,'postal_code')??null;
        
     }
+    
 
+    public function passwordChange():bool{
+        $this->customer_id = filter_input(INPUT_GET,'customer_id',FILTER_VALIDATE_INT);
+        $passHash = password_hash($this->password,PASSWORD_DEFAULT); 
+        if(password_verify($this->verifyPassword,$passHash)){
+        $query = "UPDATE customer SET password = :passHash WHERE customer_id = :customer_id";
+        $stmtChange = DB::getConnection()->prepare($query);
+        $stmtChange->bindParam(':passHash',$passHash);
+        $stmtChange->bindParam(':customer_id', $this->customer_id);
+        $stmtChange->execute();
+        return true;
+        }
+        else return false;
+        
+    }
     public function Authenticate():array{
         $query = "SELECT email,password,customer_id,name FROM customer WHERE email =:email";
         $stmt = DB::getConnection()->prepare($query);

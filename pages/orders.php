@@ -10,7 +10,6 @@ final class OrderList extends BaseDBPage{
     }
 
     public function body():string{
-
         $query = "SELECT customer.email, `order`.delivery_time, `order`.order_id, `order`.`state`, `order`.price 
         FROM customer INNER JOIN `order` 
         ON customer.order_id = `order`.order_id 
